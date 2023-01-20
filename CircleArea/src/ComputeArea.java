@@ -1,13 +1,15 @@
+import java.util.Scanner; // in java util package, must be imported
 public class ComputeArea {
     public static void main(String[] args) {
-        double radius; // declare radius
-        double area; // declare area
+        // Create a Scanner object
+        Scanner input = new Scanner(System.in);
 
-        // Assign a radius
-        radius = 20;
+        // Prompt user to input radius
+        System.out.print("Enter a number for radius: ");
+        double radius = input.nextDouble();
 
         // Compute area
-        area = radius * radius * 3.14159;
+        double area = radius * radius * 3.14159;
 
         // Display the area
         System.out.println("The area of the circle of radius " + radius + " is " + area);
