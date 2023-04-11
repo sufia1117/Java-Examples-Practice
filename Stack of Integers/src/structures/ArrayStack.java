@@ -38,4 +38,22 @@ public class ArrayStack<T> implements Stack {
         return size;
     }
 
+    public static void main(String[] args){
+        Stack<Integer> s = new ArrayStack<>(); // can switch LinkedStack<> with ArrayStack<>
+
+        s.push(Integer.valueOf(5));
+        s.push(Integer.valueOf(2));
+        s.push(Integer.valueOf(8));
+        s.push(Integer.valueOf(15));
+
+        System.out.println(s.isEmpty());  // should print 'false'
+
+        while (!s.isEmpty()) {
+            System.out.println(s.peek());  // should print each element from top to bottom
+            s.pop();
+        }
+
+        System.out.println(s.isEmpty());  // should print 'true'
+    }
+
 }
